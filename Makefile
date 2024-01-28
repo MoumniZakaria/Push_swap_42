@@ -6,7 +6,7 @@
 #    By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/23 15:44:53 by zmoumni           #+#    #+#              #
-#    Updated: 2024/01/26 17:25:48 by zmoumni          ###   ########.fr        #
+#    Updated: 2024/01/28 18:40:47 by zmoumni          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,9 +41,7 @@ SRC 	=	push_swap.c \
 			index_b.c \
 			find_b_place.c \
 			end_sort.c \
-			
-# get_next_line_utils.c \
-# get_next_line.c
+
 
 OBJ 	= 	${SRC:.c=.o}
 
