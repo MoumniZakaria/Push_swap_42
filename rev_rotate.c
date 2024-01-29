@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:39:56 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/26 15:43:44 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/29 10:41:21 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,9 @@ void	rrr(t_list **stack_A, t_list **stack_B, int check)
 	if (!(*stack_A) && !(*stack_B))
 		return ;
 	if ((*stack_A))
-		rra(stack_A, check);
+		rra(stack_A, 1);
 	if ((*stack_B))
-		rra(stack_B, check);
-	write(1, "rrr\n", 4);
+		rra(stack_B, 1);
+	if (check == 0)
+		write(1, "rrr\n", 4);
 }

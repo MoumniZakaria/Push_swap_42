@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 15:08:39 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/26 17:53:21 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/29 20:27:51 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@
 // {
 // 	system("leaks push_swap");
 // }
-
+	// atexit(fun);
 int	main(int ac, char **av)
 {
-	// atexit(fun);
 	t_list	*stack_a;
 	t_list	*stack_b;
 	int		size_b;
@@ -39,9 +38,9 @@ int	main(int ac, char **av)
 	}
 	stack_b = NULL;
 	end_sort(&stack_a);
+	free_all(&stack_a);
+}
 	// puts("=====stack a===");
 	// ft_print_list_1(stack_a);
 	// puts("=====stack b===");
 	// ft_print_list_1(stack_b);
-	free_all(&stack_a);
-}

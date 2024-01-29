@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 15:37:47 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/26 15:38:31 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/29 18:51:20 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	sb(t_list **stack_B, int check)
 {
 	t_list	*tmp;
 
-	if (!*stack_B)
+	if (!(*stack_B))
 		return ;
 	tmp = (*stack_B);
 	(*stack_B) = (*stack_B)->next;
@@ -55,8 +55,9 @@ void	ss(t_list **stack_A, t_list **stack_B, int check)
 	if (!(*stack_A) && !(*stack_B))
 		return ;
 	if ((*stack_A))
-		sa(stack_A, check);
+		sa(stack_A, 1);
 	if ((*stack_B))
-		sb(stack_B, check);
-	write(1, "ss\n", 3);
+		sb(stack_B, 1);
+	if (check == 0)
+		write(1, "ss\n", 3);
 }

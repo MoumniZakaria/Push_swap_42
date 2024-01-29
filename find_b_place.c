@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 15:43:51 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/26 12:54:47 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/29 10:44:25 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,18 +93,18 @@ void	to_a(int best_a, int best_b, t_list **stack_a, t_list **stack_b)
 {
 	while (best_a < 0 && best_b < 0)
 	{
-		rrr(stack_a, stack_b, 1);
+		rrr(stack_a, stack_b, 0);
 		best_a++;
 		best_b++;
 	}
 	while (best_a > 0 && best_b > 0)
 	{
-		rr(stack_a, stack_b, 1);
+		rr(stack_a, stack_b, 0);
 		best_a--;
 		best_b--;
 	}
 	ft_check(best_a, best_b, stack_a, stack_b);
-	pa(stack_a, stack_b);
+	pa(stack_a, stack_b, 0);
 }
 
 void	ft_check(int best_a, int best_b, t_list **stack_a, t_list **stack_b)

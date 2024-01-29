@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:54:59 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/26 17:51:11 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/29 18:52:14 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ t_list	*parssing(int ac, char**av)
 	i = 1;
 	rst = NULL;
 	if (ac < 2)
-		return (write(2, "Error\n", 6), NULL);
+		return (NULL);
 	while (av[i])
 	{
 		if (check_empty(av[i]))

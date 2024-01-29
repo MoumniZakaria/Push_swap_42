@@ -6,33 +6,11 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 17:20:37 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/26 17:22:39 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/29 09:55:57 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-char	*ft_strdup(char *src)
-{
-	int		i;
-	char	*dup;
-	int		len;
-
-	i = 0;
-	if (!src)
-		return (NULL);
-	len = ft_strlen(src);
-	dup = malloc(len + 1);
-	if (!dup)
-		return (NULL);
-	while (src[i])
-	{
-		dup[i] = src[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
-}
 
 char	*ft_strchr(char *s, int c)
 {
@@ -57,9 +35,9 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	if (ft_strlen(s) <= start)
+	if (ft_strlen(s) <= (int)start)
 		return (NULL);
-	if (len >= ft_strlen(&s[start]))
+	if (len >= (size_t)ft_strlen(&s[start]))
 		len = ft_strlen(&s[start]);
 	tbl = (char *)malloc(sizeof(char) * (len + 1));
 	if (!tbl)

@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 17:41:59 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/26 15:38:55 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/29 09:54:07 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ void	ft_sort(t_list **stack_A, t_list **stack_B)
 		if ((*stack_A)->index == 1)
 			ra((stack_A), 0);
 		else
-			pb(stack_B, stack_A);
+			pb(stack_B, stack_A, 0);
 	}
 }
