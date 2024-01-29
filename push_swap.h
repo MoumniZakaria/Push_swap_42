@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:54:50 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/29 20:28:14 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/29 20:58:39 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,8 @@ void	ft_print_list_1(t_list *head);
 void	ft_print_list_2(t_list *head);
 
 		/* PUSH */
-void    pb(t_list **stack_B, t_list **stack_A, int check);
-void    pa(t_list **Stack_A, t_list **Stack_B, int check);
+void	pb(t_list **stack_B, t_list **stack_A, int check);
+void	pa(t_list **Stack_A, t_list **Stack_B, int check);
 
 		/* SWAP */
 void	sa(t_list **stack_A, int check);
@@ -82,9 +82,9 @@ void	rb(t_list **stack_B, int check);
 void	ra(t_list **stack_A, int check);
 void	rr(t_list **stack_A, t_list **stack_B, int check);
 		/* REV_ROTATE */
-void  	rra(t_list **stack_A, int check);
-void  	rrb(t_list **stack_B, int check);
-void  	rrr(t_list **stack_A, t_list **stack_B, int check);
+void	rra(t_list **stack_A, int check);
+void	rrb(t_list **stack_B, int check);
+void	rrr(t_list **stack_A, t_list **stack_B, int check);
 
 // int		fake_swap(t_list **stack_A);
 void	ft_sort(t_list **stack_A, t_list **stack_B);
@@ -97,21 +97,17 @@ t_list	*best_head(t_list *stack_a);
 		/*FREE IN CASES ERROR OR AT END */
 void	free_all(t_list **stack_A);
 
-void    index_b(t_list **stack_b);
+void	index_b(t_list **stack_b);
 
-int find_b_place(int elem, t_list *stack_a);
+int		find_b_place(int elem, t_list *stack_a);
 
-t_best chose_best(int	b_in_a, int	b_in_b);
-int get_grandi(t_list *stack_a);
-t_best    best_move(t_list *stack_b, t_list *stack_a);
+t_best	chose_best(int b_in_a, int b_in_b);
+t_best	best_move(t_list *stack_b, t_list *stack_a);
 
+void	end_sort(t_list **stack_a);
 
-void 	end_sort(t_list **stack_a);
-
-
-int	ft_strcmp(char *s1, char *s2);
+int		ft_strcmp(char *s1, char *s2);
 
 char	*get_next_line(int fd);
 
-
-# endif
+#endif
