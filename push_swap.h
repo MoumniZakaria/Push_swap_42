@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:54:50 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/29 20:58:39 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/30 18:08:45 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,9 @@ char	*ft_strchr( char *s, int c);
 char	**malloc_error(char **tbl);
 size_t	ft_strlcpy(char *dst, char *src, size_t size);
 int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
+
+void	ft_print_list_1(t_list *head);
 
 void	to_a(int best_a, int best_b, t_list **stack_a, t_list **stack_b);
 void	ft_check(int best_a, int best_b, t_list **stack_a, t_list **stack_b);
@@ -59,42 +62,31 @@ t_list	*ft_lstnew(int content);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
-
 int		ft_lstsize(t_list *lst);
-
 void	ft_lstdelone(t_list **lst);
 
 t_list	*ft_creat_list(char **s);
-void	ft_print_list_1(t_list *head);
-void	ft_print_list_2(t_list *head);
 
-		/* PUSH */
 void	pb(t_list **stack_B, t_list **stack_A, int check);
 void	pa(t_list **Stack_A, t_list **Stack_B, int check);
 
-		/* SWAP */
 void	sa(t_list **stack_A, int check);
 void	sb(t_list **stack_A, int check);
 void	ss(t_list **stack_A, t_list **stack_B, int check);
 
-		/* ROTATE */
 void	rb(t_list **stack_B, int check);
 void	ra(t_list **stack_A, int check);
 void	rr(t_list **stack_A, t_list **stack_B, int check);
-		/* REV_ROTATE */
+
 void	rra(t_list **stack_A, int check);
 void	rrb(t_list **stack_B, int check);
 void	rrr(t_list **stack_A, t_list **stack_B, int check);
 
-// int		fake_swap(t_list **stack_A);
 void	ft_sort(t_list **stack_A, t_list **stack_B);
 
-		/*LIS */
-void	reset_index_a(t_list **stack_a);
 int		get_lis(t_list **stack_a, int a);
 t_list	*best_head(t_list *stack_a);
 
-		/*FREE IN CASES ERROR OR AT END */
 void	free_all(t_list **stack_A);
 
 void	index_b(t_list **stack_b);
@@ -105,8 +97,6 @@ t_best	chose_best(int b_in_a, int b_in_b);
 t_best	best_move(t_list *stack_b, t_list *stack_a);
 
 void	end_sort(t_list **stack_a);
-
-int		ft_strcmp(char *s1, char *s2);
 
 char	*get_next_line(int fd);
 

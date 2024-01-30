@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 15:37:47 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/29 18:51:20 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/30 18:07:27 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ void	sa(t_list **stack_A, int check)
 
 	if (!*stack_A)
 		return ;
-	tmp = (*stack_A);
-	(*stack_A) = (*stack_A)->next;
-	tmp->next = (*stack_A)->next;
-	tmp->prev->next = (*stack_A);
-	(*stack_A)->next->prev = tmp;
-	(*stack_A)->next = tmp;
-	(*stack_A)->prev = tmp->prev;
-	tmp->prev = (*stack_A);
+	tmp = (*stack_A)->next;
+	(*stack_A)->next = tmp->next;
+	tmp->next->prev = (*stack_A);
+	tmp->next = (*stack_A);
+	tmp->prev = (*stack_A)->prev;
+	(*stack_A)->prev->next = tmp;
+	(*stack_A)->prev = tmp;
+	(*stack_A) = tmp;
 	if (check == 1)
 		return ;
 	write(1, "sa\n", 3);
@@ -37,14 +37,14 @@ void	sb(t_list **stack_B, int check)
 
 	if (!(*stack_B))
 		return ;
-	tmp = (*stack_B);
-	(*stack_B) = (*stack_B)->next;
-	tmp->next = (*stack_B)->next;
-	tmp->prev->next = (*stack_B);
-	(*stack_B)->next->prev = tmp;
-	(*stack_B)->next = tmp;
-	(*stack_B)->prev = tmp->prev;
-	tmp->prev = (*stack_B);
+	tmp = (*stack_B)->next;
+	(*stack_B)->next = tmp->next;
+	tmp->next->prev = (*stack_B);
+	tmp->next = (*stack_B);
+	tmp->prev = (*stack_B)->prev;
+	(*stack_B)->prev->next = tmp;
+	(*stack_B)->prev = tmp;
+	(*stack_B) = tmp;
 	if (check == 1)
 		return ;
 	write(1, "sb\n", 3);

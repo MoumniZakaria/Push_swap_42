@@ -6,25 +6,11 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 14:45:55 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/26 13:00:35 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/29 21:00:03 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	reset_index_a(t_list **stack_A)
-{
-	t_list	*head;
-
-	head = (*stack_A);
-	while ((*stack_A))
-	{
-		(*stack_A)->index = 0;
-		(*stack_A) = (*stack_A)->next;
-		if ((*stack_A)->next == head)
-			break ;
-	}
-}
 
 int	get_lis(t_list **stack_a, int ok)
 {

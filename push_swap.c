@@ -6,16 +6,12 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 15:08:39 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/29 20:27:51 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/30 18:07:58 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// void	fun()
-// {
-// 	system("leaks push_swap");
-// }
-	// atexit(fun);
+
 int	main(int ac, char **av)
 {
 	t_list	*stack_a;
@@ -40,7 +36,3 @@ int	main(int ac, char **av)
 	end_sort(&stack_a);
 	free_all(&stack_a);
 }
-	// puts("=====stack a===");
-	// ft_print_list_1(stack_a);
-	// puts("=====stack b===");
-	// ft_print_list_1(stack_b);
