@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 15:21:47 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/30 18:07:07 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/31 13:03:54 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,12 +87,16 @@ int	main(int ac, char **av)
 	while (cmd != NULL)
 	{
 		if (instroctions(&stack_a, &stack_b, cmd))
+		{
+			free(cmd);
+			cmd = NULL;
 			cmd = get_next_line(0);
+		}
 		else
-			return (0);
+			return (free_all(&stack_a), free_all(&stack_b), free(cmd), 0);
 	}
-	if (ft_is_sorted(stack_a) == 1)
-		return (write(1, "OK\n", 3), 0);
+	if (ft_is_sorted(stack_a) == 1 && !ft_lstsize(stack_b))
+		return (write(1, "OK\n", 3), free_all(&stack_b), free_all(&stack_a), 0);
 	else
-		return (write(1, "KO\n", 3), 0);
+		return (write(1, "KO\n", 3), free_all(&stack_b), free_all(&stack_a), 0);
 }
