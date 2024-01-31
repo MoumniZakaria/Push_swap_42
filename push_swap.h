@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:54:50 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/30 18:08:45 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/31 12:34:34 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 # define PUSH_SWAP_H
 
 # include <stdlib.h>
+# include <limits.h>
 # include <unistd.h>
-# include <stdio.h>
-# include <string.h>
-# include <libc.h>
 
 typedef struct s_list
 {
@@ -51,7 +49,6 @@ size_t	ft_strlcpy(char *dst, char *src, size_t size);
 int		ft_strlen(char *str);
 int		ft_strcmp(char *s1, char *s2);
 
-void	ft_print_list_1(t_list *head);
 
 void	to_a(int best_a, int best_b, t_list **stack_a, t_list **stack_b);
 void	ft_check(int best_a, int best_b, t_list **stack_a, t_list **stack_b);
