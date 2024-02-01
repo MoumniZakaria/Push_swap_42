@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:55:23 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/26 15:45:22 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/02/01 17:42:50 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ long	ft_atoi(char *str)
 			m = m * (-1);
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (str[i] >= '0' && str[i] <= '9' && rst <= INT_MAX)
 	{
 		rst = (rst * 10) + str[i] - 48 ;
 		i++;
