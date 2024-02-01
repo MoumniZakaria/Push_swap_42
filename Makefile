@@ -6,7 +6,7 @@
 #    By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/23 15:44:53 by zmoumni           #+#    #+#              #
-#    Updated: 2024/01/31 10:22:40 by zmoumni          ###   ########.fr        #
+#    Updated: 2024/01/31 14:28:22 by zmoumni          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,6 @@ SRC 	=	push_swap.c \
 			lst_last.c \
 			lst_new.c \
 			list.c \
-			ft_print_list.c\
 			lst_delone.c \
 			lst_size.c \
 			push.c \
@@ -54,7 +53,6 @@ BSRC	=	checker.c \
 			lst_last.c \
 			lst_new.c \
 			list.c \
-			ft_print_list.c\
 			lst_delone.c \
 			lst_size.c \
 			push.c \

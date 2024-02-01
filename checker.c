@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 15:21:47 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/31 13:03:54 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/02/01 15:02:03 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,13 @@ int	ft_strcmp(char *s1, char *s2)
 	return (1);
 }
 
-int	ft_is_sorted(t_list	*stack_a)
+int		ft_is_sorted(t_list	*stack_a)
 {
 	t_list	*head;
 	t_list	*next;
 
+	if (!stack_a)
+		return (0);
 	head = stack_a;
 	while (1)
 	{

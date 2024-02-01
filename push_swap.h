@@ -6,7 +6,7 @@
 /*   By: zmoumni <zmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:54:50 by zmoumni           #+#    #+#             */
-/*   Updated: 2024/01/31 13:04:34 by zmoumni          ###   ########.fr       */
+/*   Updated: 2024/01/31 14:53:28 by zmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_list
 
 typedef struct s_best
 {
+
 	int	best;
 	int	best_in_a;
 	int	best_in_b;
